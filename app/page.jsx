@@ -5,9 +5,8 @@ import Link from 'next/link'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import SkillCard from './components/SkillCard'
+import ContactForm from './components/ContactForm'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { 
   React as ReactIcon, 
   Database, 
@@ -348,45 +347,7 @@ export default function Home() {
               social media to explore exciting opportunities and spark innovative ideas
             </p>
           </div>
-          <form name="contact" className="space-y-6" onSubmit={(e) => {
-            e.preventDefault()
-            alert('Thank you for your message! I will get back to you soon.')
-            e.target.reset()
-          }}>
-            <div>
-              <Input
-                name="name"
-                type="text"
-                required
-                placeholder="Name"
-                className="w-full text-base py-5 px-4 border border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-              />
-            </div>
-            <div>
-              <Input
-                name="email"
-                type="email"
-                required
-                placeholder="Email"
-                className="w-full text-base py-5 px-4 border border-gray-300 dark:border-gray-600 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-              />
-            </div>
-            <div>
-              <Textarea
-                name="message"
-                required
-                placeholder="Message"
-                rows={8}
-                className="w-full text-base py-5 px-4 border border-gray-300 dark:border-gray-600 min-h-[200px] focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-              />
-            </div>
-            <Button
-              type="submit"
-              className="w-full bg-brand-dark hover:bg-primary text-white border border-transparent hover:border-white transition-all duration-500 py-6 text-lg font-bold rounded-full"
-            >
-              Send Message
-            </Button>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
