@@ -31,11 +31,13 @@ A modern, responsive portfolio website built with Next.js 14, TailwindCSS, and S
 ### Installation
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Add your images to the `public` folder:
+
    - `portrait-me.jpg` (hero image)
    - `about-me.jpg`
    - `author-me.jpg`
@@ -44,6 +46,7 @@ npm install
    - `app.png`
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -81,6 +84,7 @@ npm run dev
 ### Colors
 
 Brand colors are defined in `tailwind.config.js`:
+
 - `brand-green`: #a8dadc
 - `brand-red`: #e63946
 - `brand-dark`: #1d3557
@@ -103,7 +107,3 @@ npm start
 ## License
 
 This project is private and proprietary.
-
-
-
-
