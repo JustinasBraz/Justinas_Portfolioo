@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 320">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e63946;
+      }
+
+      .cls-2 {
+        fill: #1d3557;
+        font-family: Dubai-Bold, Dubai;
+        font-size: 230.49px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Layer_1">
+      <text class="cls-2" transform="translate(150.71 240.92)"><tspan x="0" y="0">JB</tspan></text>
+      <circle class="cls-1" cx="115.68" cy="135.51" r="44.82"/>
+    </g>
+  </g>
+</svg>
