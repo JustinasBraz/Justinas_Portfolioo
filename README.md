@@ -97,12 +97,60 @@ The project uses Open Sans font, loaded via Google Fonts in `globals.css`.
 
 Dark mode is implemented using Tailwind's class-based dark mode. The theme toggle is in the Navbar component and persists the user's preference in localStorage.
 
+## Environment Variables
+
+1. Copy the example environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+2. Add your environment variables to `.env.local`:
+   - `RESEND_API_KEY` - Your Resend API key for email functionality (get it from https://resend.com/api-keys)
+
+**Note:** `.env.local` is already in `.gitignore` and will not be committed to version control.
+
 ## Build for Production
 
 ```bash
 npm run build
 npm start
 ```
+
+## Deployment
+
+### Deploy to Vercel (Recommended)
+
+This project is configured for easy deployment on Vercel:
+
+1. **Push your code to GitHub/GitLab/Bitbucket**
+
+2. **Import your repository to Vercel:**
+
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Add New Project"
+   - Import your repository
+   - Vercel will automatically detect Next.js
+
+3. **Add Environment Variables:**
+
+   - In your Vercel project settings, go to "Environment Variables"
+   - Add `RESEND_API_KEY` with your Resend API key value
+   - Make sure to add it for all environments (Production, Preview, Development)
+
+4. **Deploy:**
+   - Vercel will automatically build and deploy your project
+   - Your site will be live at `your-project.vercel.app`
+
+### Deploy to Other Platforms
+
+For other platforms (Netlify, Railway, etc.):
+
+1. Make sure Node.js 18+ is available
+2. Set the build command: `npm run build`
+3. Set the start command: `npm start` (if needed)
+4. Add environment variables in the platform's settings
+5. Deploy!
 
 ## License
 
