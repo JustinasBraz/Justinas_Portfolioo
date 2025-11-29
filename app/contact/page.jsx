@@ -1,11 +1,35 @@
 'use client'
 
+import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import ContactForm from '../components/ContactForm'
-import { Github, Linkedin } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Github, Linkedin, Mail, Phone } from 'lucide-react'
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // Handle form submission here
+    console.log('Form submitted:', formData)
+    alert('Thank you for your message! I will get back to you soon.')
+    setFormData({ name: '', email: '', message: '' })
+  }
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
 
   return (
     <main className="min-h-screen">
@@ -28,7 +52,47 @@ export default function Contact() {
             you to reach out to me via email or
             social media to explore exciting opportunities and spark innovative ideas
           </p>
-          <ContactForm />
+          <form onSubmit={handleSubmit} name="contact" className="space-y-6">
+            <div>
+              <Input
+                name="name"
+                type="text"
+                required
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Name"
+                className="w-full text-base py-5 px-4 border border-gray-300 dark:border-gray-600"
+              />
+            </div>
+            <div>
+              <Input
+                name="email"
+                type="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                className="w-full text-base py-5 px-4 border border-gray-300 dark:border-gray-600"
+              />
+            </div>
+            <div>
+              <Textarea
+                name="message"
+                required
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Message"
+                rows={8}
+                className="w-full text-base py-5 px-4 border border-gray-300 dark:border-gray-600 min-h-[200px]"
+              />
+            </div>
+            <Button
+              type="submit"
+              className="w-full bg-brand-dark hover:bg-primary text-white border border-transparent hover:border-white transition-all duration-500 py-6 text-lg font-bold rounded-full"
+            >
+              Send Message
+            </Button>
+          </form>
         </div>
       </section>
 
